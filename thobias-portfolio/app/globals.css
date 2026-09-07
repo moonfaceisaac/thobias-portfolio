@@ -1,0 +1,46 @@
+/* @import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+@import "tailwindcss";
+
+@layer utilities {
+  .font-caladea {
+    font-family: var(--font-caladea), serif;
+  }
+  .font-changa {
+    font-family: var(--font-changa-one), cursive;
+  }
+  
+  /* Trapezoid shape for folder tabs */
+  .tab-trapezoid {
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+body {
+  background: linear-gradient(180deg, #252424 0%, #252424 100%);
+  overflow-x: hidden;
+}
