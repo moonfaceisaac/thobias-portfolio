@@ -99,7 +99,7 @@ export default function FolderContainer() {
           />
         </div>
         {/* DOSSIER SECTION (Takes larger width on desktop) */}
-        <div className="w-full md:w-[60%] relative flex items-start rotate-0 md:-rotate-2 md:hover:rotate-0 transition-transform duration-300 origin-center">
+        <div className="w-full md:w-[60%] max-w-[800px] relative flex items-start ">
           {/* Vertical Folder Body */}
           <div className="relative z-20 flex-1 bg-[#FF894A] p-4 sm:p-6 min-h-[800px] rounded-l-md shadow-2xl overflow-hidden border-l border-y border-white/20">
             {/* Map Texture Overlay */}
@@ -149,7 +149,7 @@ export default function FolderContainer() {
             )}
           </div>
             {/* Right Vertical Tabs (Navbar) */}
-          <div className="flex flex-col gap-2 pt-8 -ml-3 z-10">
+          <div className="flex flex-col gap-2 pt-20 -ml-3 z-10">
             {TABS.map((tab) => (
               <FolderTab
                 key={tab.id}
