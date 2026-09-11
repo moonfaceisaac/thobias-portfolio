@@ -10,70 +10,6 @@ import { PORTFOLIO_DATA } from "@/data/portfolioData";
 import stampSvg from "../../assets/svg/not-confidential-stamp.svg";
 import folderTexture from "../../assets/textures/folder-map-texture.png";
 
-// const TABS = [
-//   { id: "education", label: "Education", color: "#6045C3" },
-//   { id: "experience", label: "Experience", color: "#CF3B3B" },
-//   { id: "project", label: "Project", color: "#27AA5E" },
-//   { id: "skills", label: "Skills", color: "#B84F98" },
-//   { id: "hobbies", label: "Hobbies", color: "#D0B753" },
-// ];
-
-// export default function FolderContainer() {
-//   const [activeTabId, setActiveTabId] = useState<string>("education");
-//   const activeSection = PORTFOLIO_DATA[activeTabId] || PORTFOLIO_DATA.education;
-
-//   return (
-//     <div className="w-full max-w-6xl mx-auto px-2 sm:px-4 my-8">
-//       {/* 5 Top Navigation Folder Tabs */}
-//       <div className="flex w-full items-end gap-1 px-2">
-//         {TABS.map((tab) => (
-//           <FolderTab
-//             key={tab.id}
-//             id={tab.id}
-//             label={tab.label}
-//             color={tab.color}
-//             isActive={activeTabId === tab.id}
-//             onClick={() => setActiveTabId(tab.id)}
-//           />
-//         ))}
-//       </div>
-
-//       {/* Dynamic Colored Header Bar matching the active tab */}
-//       <div
-//         className="w-full h-8 sm:h-10 transition-colors duration-300 rounded-t-sm"
-//         style={{ backgroundColor: activeSection.color }}
-//       />
-
-//       {/* Main Orange Folder Body (#FF894A) */}
-//       <div className="relative w-full bg-[#FF894A] p-4 sm:p-8 min-h-[600px] rounded-b-md shadow-2xl overflow-hidden">
-//         {/* Subtle Map Texture Overlay */}
-//         <div className="absolute inset-0 pointer-events-none opacity-25 mix-blend-overlay">
-//           <Image
-//             src={folderTexture}
-//             alt="Folder texture"
-//             fill
-//             className="object-cover"
-//           />
-//         </div>
-
-//         {/* Vertical NOT CONFIDENTIAL Stamp on Left Edge */}
-//         <div className="absolute left-2 sm:left-4 top-8 sm:top-12 bottom-8 w-12 sm:w-16 pointer-events-none z-20">
-//           <Image
-//             src={stampSvg}
-//             alt="Not Confidential Stamp"
-//             fill
-//             className="object-contain object-left"
-//           />
-//         </div>
-
-//         {/* Inner Binder Sheet Content */}
-//         <div className="relative z-10 my-4 sm:my-8">
-//           <DocumentSheet section={activeSection} />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 const TABS = [
   { id: "education", label: "Education", color: "#6045C3" },
   { id: "experience", label: "Experience", color: "#CF3B3B" },
@@ -91,7 +27,7 @@ export default function FolderContainer() {
   return (
     <div className="w-full max-w-8xl mx-auto px-4 py-6">
       {/* Desktop: Side-by-Side (Dossier Left, ID Right) | Mobile: Stacked */}
-      <div className="flex flex-col md:flex-row items-start justify-center gap-8">
+      <div className="flex flex-col md:flex-row items-start justify-start gap-8">
         <div className="w-full md:w-[38%] flex justify-center">
           <AboutMeSection
             isUnclipped={isUnclipped}
