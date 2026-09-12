@@ -7,7 +7,7 @@ import DocumentSheet from "../documents/DocumentSheet";
 import AboutMeSection from "../id-card/AboutMeSection";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
 
-import stampSvg from "../../assets/svg/not-confidential-stamp.svg";
+import stampSvg from "../../assets/svg/not-confidential-stamp2.svg";
 import folderTexture from "../../assets/textures/folder-map-texture.png";
 
 const TABS = [
@@ -37,7 +37,7 @@ export default function FolderContainer() {
         {/* DOSSIER SECTION (Takes larger width on desktop) */}
         <div className="w-full md:w-[60%] max-w-[800px] relative flex items-start ">
           {/* Vertical Folder Body */}
-          <div className="relative z-20 flex-1 bg-[#FF894A] p-4 sm:p-6 min-h-[800px] rounded-l-md shadow-2xl overflow-hidden border-l border-y border-white/20">
+          <div className="relative z-20 flex-1 bg-[#FF894A] p-4 sm:p-6 h-[800px] rounded-l-md shadow-2xl overflow-hidden border-l border-y border-white/20">
             {/* Map Texture Overlay */}
             <div className="absolute inset-0 pointer-events-none opacity-25 mix-blend-overlay">
               <Image
@@ -54,18 +54,18 @@ export default function FolderContainer() {
             {!activeTabId ? (
               <div
                 onClick={() => setActiveTabId("education")}
-                className="relative w-full h-full min-h-[500px] flex flex-col justify-start pt-6 cursor-pointer"
+                className="relative min-h-full w-full flex flex-col justify-between items-center pt-6 cursor-pointer"
               >
                 {/* Stamp */}
-                <div className="relative w-48 sm:w-64 h-16 sm:h-20 mb-8">
+                <div className="relative min-h-[100px] min-w-full sm:w-64 h-16 sm:h-20">
                   <Image
                     src={stampSvg}
                     alt="Not Confidential Stamp"
                     fill
-                    className="object-contain object-left"
+                    className="object-contain -rotate-3"
                   />
                 </div>
-                <div className="text-white/80 font-mono text-xs sm:text-sm mt-auto pb-4">
+                <div className="text-white/80 font-mono text-xs sm:text-sm pb-4">
                   [ Click any tab on the right to open file dossier ]
                 </div>
               </div>
