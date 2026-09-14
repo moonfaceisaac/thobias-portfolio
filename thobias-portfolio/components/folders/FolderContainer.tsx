@@ -6,6 +6,7 @@ import FolderTab from "./FolderTab";
 import DocumentSheet from "../documents/DocumentSheet";
 import AboutMeSection from "../id-card/AboutMeSection";
 import { PORTFOLIO_DATA } from "@/data/portfolioData";
+import { motion, AnimatePresence } from "framer-motion";
 
 import stampSvg from "../../assets/svg/not-confidential-stamp2.svg";
 import folderTexture from "../../assets/textures/folder-map-texture.png";
@@ -37,7 +38,10 @@ export default function FolderContainer() {
         {/* DOSSIER SECTION (Takes larger width on desktop) */}
         <div className="w-full md:w-[60%] max-w-[800px] relative flex items-start ">
           {/* Vertical Folder Body */}
-          <div className="relative z-20 flex-1 bg-[#FF894A] p-4 sm:p-6 h-[800px] rounded-l-md shadow-2xl overflow-hidden border-l border-y border-white/20">
+          <div
+            className="relative z-20 flex-1 bg-[#FF894A] p-4 sm:p-6 min-h-[800px] rounded-l-md shadow-2xl overflow-hidden border-l border-y border-white/20"
+            style={{ perspective: "2000px" }}
+          >
             {/* Map Texture Overlay */}
             <div className="absolute inset-0 pointer-events-none opacity-25 mix-blend-overlay">
               <Image
@@ -51,40 +55,65 @@ export default function FolderContainer() {
             {/* <div className="relative z-20 flex-1 bg-[#FF894A] p-4 sm:p-6 min-h-[600px] rounded-l-md shadow-3xl overflow-hidden border-l border-y border-white/20"></div> */}
 
             {/* Folder Cover / Closed State */}
-            {!activeTabId ? (
-              <div
-                onClick={() => setActiveTabId("education")}
-                className="relative min-h-full w-full flex flex-col justify-between items-center pt-6 cursor-pointer"
-              >
-                {/* Stamp */}
-                <div className="relative min-h-[100px] min-w-full sm:w-64 h-16 sm:h-20">
-                  <Image
-                    src={stampSvg}
-                    alt="Not Confidential Stamp"
-                    fill
-                    className="object-contain -rotate-3"
-                  />
-                </div>
-                <div className="text-white/80 font-mono text-xs sm:text-sm pb-4">
-                  [ Click any tab on the right to open file dossier ]
-                </div>
-              </div>
-            ) : (
-              /* Inner Document Sheet when folder is opened */
-              <div className="relative z-10">
-                <div className="flex justify-between items-center mb-2">
-                  <button
-                    onClick={() => setActiveTabId(null)}
-                    className="text-xs font-mono text-white/90 hover:text-white underline cursor-pointer"
-                  >
-                    ← Close Dossier Cover
-                  </button>
-                </div>
-                {activeSection && <DocumentSheet section={activeSection} />}
-              </div>
-            )}
+            <AnimatePresence mode="wait" initial={false}>
+              {!activeTabId ? (
+                <motion.div
+                  key="cover"
+                  onClick={() => setActiveTabId("education")}
+                  className="relative min-h-full w-full flex flex-col justify-between items-center pt-6 cursor-pointer"
+                  style={{
+                    transformOrigin: "left center",
+                    backfaceVisibility: "hidden",
+                  }}
+                  initial={{ rotateY: 0, opacity: 1 }}
+                  animate={{ rotateY: 0, opacity: 1 }}
+                  exit={{ rotateY: -110, opacity: 0 }}
+                  transition={{ duration: 0.5, ease: [0.42, 0, 0.58, 1] }}
+                >
+                  {/* Stamp */}
+                  <div className="relative min-h-[100px] min-w-full sm:w-64 h-16 sm:h-20">
+                    <Image
+                      src={stampSvg}
+                      alt="Not Confidential Stamp"
+                      fill
+                      className="object-contain -rotate-3"
+                    />
+                  </div>
+                  <div className="text-white/80 font-mono text-xs sm:text-sm pb-4">
+                    [ Click any tab on the right to open file dossier ]
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="sheet"
+                  className="relative z-10"
+                  style={{
+                    transformOrigin: "left center",
+                    backfaceVisibility: "hidden",
+                  }}
+                  initial={{ rotateY: 90, opacity: 0 }}
+                  animate={{ rotateY: 0, opacity: 1 }}
+                  exit={{ rotateY: 90, opacity: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: [0.42, 0, 0.58, 1],
+                    delay: 0.25,
+                  }}
+                >
+                  <div className="flex justify-between items-center mb-2">
+                    <button
+                      onClick={() => setActiveTabId(null)}
+                      className="text-xs font-mono text-white/90 hover:text-white underline cursor-pointer"
+                    >
+                      ← Close Dossier Cover
+                    </button>
+                  </div>
+                  {activeSection && <DocumentSheet section={activeSection} />}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-            {/* Right Vertical Tabs (Navbar) */}
+          {/* Right Vertical Tabs (Navbar) */}
           <div className="flex flex-col gap-2 pt-20 -ml-3 z-10">
             {TABS.map((tab) => (
               <FolderTab

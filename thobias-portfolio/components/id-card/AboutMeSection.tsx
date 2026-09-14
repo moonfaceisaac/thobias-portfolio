@@ -38,8 +38,8 @@ export default function AboutMeSection({
           initial={false}
           animate={
             isUnclipped
-              ? { x: 150, y: -160, rotate: 35, scale: 1.05 }
-              : { x: -75, y: isMobile ? -105 : -150, rotate: 0, scale: 1 }
+              ? { x: 150, y: -160, rotate: 35, scale:isMobile? 1.5 : 2 }
+              : { x: -75, y: isMobile ? -97 : -135, rotate: 0, scale:isMobile? 1.5 : 2 }
           }
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
           title="Click to unclip"
