@@ -22,7 +22,7 @@ export default function SectionRenderer({ block }: { block: ContentBlock }) {
           <div className="w-full sm:flex-1 min-w-0">
             <SectionBody details={block.details} />
           </div>
-          <div className="w-full sm:flex-1 min-w-0">
+          <div className="w-full h-full sm:flex-1 min-w-0 ">
             <SectionImageBody images={block.images!} />
           </div>
         </div>

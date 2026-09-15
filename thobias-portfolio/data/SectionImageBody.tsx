@@ -9,7 +9,8 @@ export default function SectionImageBody({ images }: SectionImageBodyProps) {
   if (!images?.length) return null;
 
   return (
-    <div className="flex flex-row gap-4 justify-center flex-wrap">
+    // <div className="flex flex-row gap-4 justify-center flex-wrap">
+    <div className="flex flex-col gap-4 justify-center">
       {images.map((img, i) => (
         <TapedImage
           key={i}

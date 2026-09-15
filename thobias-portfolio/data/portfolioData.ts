@@ -1,4 +1,8 @@
 import mecEvents1 from "../assets/screenshots/mec-events-1.jpg";
+import mecComp1 from "../assets/screenshots/mec-comp-1.jpg";
+import mecComp2 from "../assets/screenshots/mec-comp-5.jpg";
+import mecComp3 from "../assets/screenshots/mec-comp-2.jpg";
+import gradCeremony from "../assets/screenshots/graduation-ceremony-3.jpg";
 import type { StaticImageData } from "next/image";
 
 export interface SectionImage {
@@ -22,8 +26,6 @@ export interface ProjectItem {
   tags: string[];
   blocks?: ContentBlock[];
 }
-
-
 
 export interface PortfolioSection {
   id: "education" | "experience" | "project" | "skills" | "hobbies";
@@ -56,35 +58,32 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         id: "academic-summary",
         title: "ACADEMIC SUMMARY",
         details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+          "I graduated from Universitas Mikroskil with a Bachelor's degree in Computer Science, completing my studies in 3 years and 8 months. Throughout my university years, I actively participated in various extracurricular activities alongside my academic journey.",
         ],
       },
       {
         id: "student-organization",
         title: "STUDENT ORGANIZATION",
         details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+          "I joined Mikroskil English Club (MEC) in my first semester. MEC is one of the student organizations at my university that focuses on helping students build confidence in speaking English through public speaking and competitive debating. The club is divided into two divisions: Public Speaking and Debate. I joined the Public Speaking Division during my first year before switching to the Debate Division, where I remained until I graduated.",
+          "During my time in the Debate Division, I participated in numerous debate competitions while also serving as the club's Event Organizer for one year. In this role, I contributed ideas for club events, managed event administration, coordinated committees, and moderated several events organized by the club.",
         ],
         images: [
-          { src: mecEvents1, alt: "EASE-R diagram", ratio: 4 / 3 },
-          
+          { src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 },
+          { src: mecComp1, alt: "MEC-COMP-1", ratio: 4 / 3 },
+          { src: mecComp2, alt: "MEC-COMP-2", ratio: 4 / 3 },
+          { src: mecComp3, alt: "MEC-COMP-3", ratio: 4 / 3 }
 
-
-        ]
-          // { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
-        
+        ],
+      },
+      {
+        id: "extra-activites-campus-related",
+        title: "EXTRA ACTIVITIES",
+        details: [
+          "Outside Student Organization, I was selected twice in a row as a committee member for my university's graduation ceremony. My responsibility was to serve as the official name announcer, announcing the names of graduates during the ceremony.",
+          "In my 7th semester, I was selected as a Lecturer's Computer Lab Assistant. My responsibilities included preparing laboratory devices before each class, maintaining a conducive learning environment, assisting lecturers in delivering course materials and assignments, and helping students understand the practical materials during lab sessions."
+        ],
+        images: [{ src: gradCeremony, alt: "GRAD-CEREMONY-1", ratio: 4 / 3 }],
       },
     ],
 
@@ -119,8 +118,8 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
           "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
         ],
         images: [
-          { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
-          { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
+          // { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
+          // { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
         ],
       },
     ],
@@ -154,16 +153,16 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
               "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
             ],
             images: [
-              {
-                src: "/images/thesis-1.jpg",
-                alt: "EASE-R diagram",
-                ratio: 4 / 3,
-              },
-              {
-                src: "/images/thesis-2.jpg",
-                alt: "Evaluation results",
-                ratio: 1,
-              },
+              // {
+              //   src: "/images/thesis-1.jpg",
+              //   alt: "EASE-R diagram",
+              //   ratio: 4 / 3,
+              // },
+              // {
+              //   src: "/images/thesis-2.jpg",
+              //   alt: "Evaluation results",
+              //   ratio: 1,
+              // },
             ],
           },
         ],
@@ -191,16 +190,16 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
               "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
             ],
             images: [
-              {
-                src: "/images/thesis-1.jpg",
-                alt: "EASE-R diagram",
-                ratio: 4 / 3,
-              },
-              {
-                src: "/images/thesis-2.jpg",
-                alt: "Evaluation results",
-                ratio: 1,
-              },
+              // {
+              //   src: "/images/thesis-1.jpg",
+              //   alt: "EASE-R diagram",
+              //   ratio: 4 / 3,
+              // },
+              // {
+              //   src: "/images/thesis-2.jpg",
+              //   alt: "Evaluation results",
+              //   ratio: 1,
+              // },
             ],
           },
         ],
@@ -228,16 +227,16 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
               "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
             ],
             images: [
-              {
-                src: "/images/thesis-1.jpg",
-                alt: "EASE-R diagram",
-                ratio: 4 / 3,
-              },
-              {
-                src: "/images/thesis-2.jpg",
-                alt: "Evaluation results",
-                ratio: 1,
-              },
+              // {
+              //   src: "/images/thesis-1.jpg",
+              //   alt: "EASE-R diagram",
+              //   ratio: 4 / 3,
+              // },
+              // {
+              //   src: "/images/thesis-2.jpg",
+              //   alt: "Evaluation results",
+              //   ratio: 1,
+              // },
             ],
           },
         ],
@@ -269,8 +268,8 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
           "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
         ],
         images: [
-          { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
-          { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
+          // { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
+          // { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
         ],
       },
     ],
@@ -300,8 +299,8 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
           "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
         ],
         images: [
-          { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
-          { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
+          // { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
+          // { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
         ],
       },
     ],
