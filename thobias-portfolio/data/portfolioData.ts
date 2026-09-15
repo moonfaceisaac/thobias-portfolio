@@ -72,8 +72,7 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
           { src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 },
           { src: mecComp1, alt: "MEC-COMP-1", ratio: 4 / 3 },
           { src: mecComp2, alt: "MEC-COMP-2", ratio: 4 / 3 },
-          { src: mecComp3, alt: "MEC-COMP-3", ratio: 4 / 3 }
-
+          { src: mecComp3, alt: "MEC-COMP-3", ratio: 4 / 3 },
         ],
       },
       {
@@ -81,41 +80,38 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         title: "EXTRA ACTIVITIES",
         details: [
           "Outside Student Organization, I was selected twice in a row as a committee member for my university's graduation ceremony. My responsibility was to serve as the official name announcer, announcing the names of graduates during the ceremony.",
-          "In my 7th semester, I was selected as a Lecturer's Computer Lab Assistant. My responsibilities included preparing laboratory devices before each class, maintaining a conducive learning environment, assisting lecturers in delivering course materials and assignments, and helping students understand the practical materials during lab sessions."
+          "In my 7th semester, I was selected as a Lecturer's Computer Lab Assistant. My responsibilities included preparing laboratory devices before each class, maintaining a conducive learning environment, assisting lecturers in delivering course materials and assignments, and helping students understand the practical materials during lab sessions.",
         ],
         images: [{ src: gradCeremony, alt: "GRAD-CEREMONY-1", ratio: 4 / 3 }],
       },
     ],
-
-    // details: [
-    //   'Currently pursuing a Bachelor of Computer Science in Informatics Engineering.',
-    //   'Conducting undergraduate thesis research on EASE-R collaborative filtering recommendation systems.',
-    //   'Proficient in Data Structures, Database Architecture, Software Engineering, and Machine Learning fundamentals.'
-    // ]
   },
   experience: {
     id: "experience",
     title: "EXPERIENCE OVERVIEW",
     tabLabel: "Experience",
     color: "#CF3B3B",
-    date: "2023 - Present",
-    prodi: "Full-Stack & Data",
-    tags: ["Web Application", "Data Analysis", "Engineering"],
     blocks: [
       {
-        id: "academic-summary",
-        title: "ACADEMIC SUMMARY",
+        id: "lecturer-assistant",
+        title: "Lecturer Assistant",
         details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+          "Place of Work: Universitas Mikroskil, Sumatra Utara, Medan (Onsite)",
+          "Years Active: September 2025 - Present",
+          "- Guided 150+ students across 60+ Mobile Back End and Web Back End laboratory sessions, troubleshooting technical issues and clarifying concepts to support completion of practical assignments.",
+          "- Troubleshot network and hardware issues during 60+ laboratory sessions, minimizing disruptions to practical activities.",
+          "- Managed assignment submissions across two semesters, ensuring materials were systematically prepared for lecturer assessment.",
         ],
       },
       {
-        id: "student-organization",
-        title: "STUDENT ORGANIZATION",
+        id: "machine-learning-engineer",
+        title: "Machine Learning Engineer Co-Hort",
         details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+          "Place of Work: Coding Camp Powered By DBS Foundation (Remote)",
+          "Years Active: February 2025 - July 2025",
+          "- Completed 10+ technical coursework and ILT assignments covering Programming Logic, SQL, Applied Machine Learning, and Generative AI during a 5-month apprenticeship, completing all program requirements ahead of schedule.",
+          "- Earned 4,100 Milestone Points, maintained 100% attendance across 17 weekly consultations, and received High-Performing Student recognition in the English ILT Activity Class.",
+          "- Led a cross-functional team in the final week of the capstone after the original leader became unavailable, coordinating 10+ action items to deliver LearnTic: Student Performance Prediction on time.",
         ],
         images: [
           // { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
@@ -131,39 +127,41 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
     color: "#27AA5E",
     projects: [
       {
-        id: "food-recipe",
-        title: "Food System Recommendation",
+        id: "food-recsys",
+        title:
+          "Food Recipe System Recommendation Using Collaborative Filtering with EASE-R Model",
         date: "2026",
         prodi: "Teknik Informatika",
         tags: ["EASE-R", "Collaborative Filtering", "Next.js"],
         blocks: [
           {
-            id: "academic-summary",
-            title: "ACADEMIC SUMMARY",
+            id: "project-description",
+            title: "PROJECT DESCRIPTION",
             details: [
-              "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-              "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+              "Developed and deployed a web-based food recipe recommendation system using the EASE-R collaborative filtering model to address the choice overload problem in the food recipe domain. The recommendation model was trained on 676K+ user interactions across 29K recipes and integrated into a full-stack web application built with React, Node.js, Express, and PostgreSQL through a REST API. The system was evaluated using Recall@10 and NDCG@10, achieving 0.0262 Recall@10 and 0.0123 NDCG@10, outperforming a popularity-based recommendation baseline.",
+              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
             ],
           },
           {
-            id: "student-organization",
-            title: "STUDENT ORGANIZATION",
+            id: "tech-stacks",
+            title: "TECH STACKS",
             details: [
-              "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-              "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
             ],
-            images: [
-              // {
-              //   src: "/images/thesis-1.jpg",
-              //   alt: "EASE-R diagram",
-              //   ratio: 4 / 3,
-              // },
-              // {
-              //   src: "/images/thesis-2.jpg",
-              //   alt: "Evaluation results",
-              //   ratio: 1,
-              // },
-            ],
+          },
+          {
+            id: "demo-and-screenshots",
+            title: "DEMO AND SCREENSHOTS",
+          },
+          {
+            id: "demo-and-screenshots1",
+            details: ["sd"],
+            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+          },
+          {
+            id: "demo-and-screenshots2",
+            details: ["sd"],
+            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
           },
         ],
       },
