@@ -173,32 +173,71 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         tags: ["React", "LMS", "Web System"],
         blocks: [
           {
-            id: "academic-summary",
-            title: "ACADEMIC SUMMARY",
+            id: "project-description",
+            title: "PROJECT DESCRIPTION",
             details: [
-              "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-              "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+              "Developed and deployed a web-based food recipe recommendation system using the EASE-R collaborative filtering model to address the choice overload problem in the food recipe domain. The recommendation model was trained on 676K+ user interactions across 29K recipes and integrated into a full-stack web application built with React, Node.js, Express, and PostgreSQL through a REST API. The system was evaluated using Recall@10 and NDCG@10, achieving 0.0262 Recall@10 and 0.0123 NDCG@10, outperforming a popularity-based recommendation baseline.",
+              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
             ],
           },
           {
-            id: "student-organization",
-            title: "STUDENT ORGANIZATION",
+            id: "tech-stacks",
+            title: "TECH STACKS",
             details: [
-              "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-              "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
             ],
-            images: [
-              // {
-              //   src: "/images/thesis-1.jpg",
-              //   alt: "EASE-R diagram",
-              //   ratio: 4 / 3,
-              // },
-              // {
-              //   src: "/images/thesis-2.jpg",
-              //   alt: "Evaluation results",
-              //   ratio: 1,
-              // },
+          },
+          {
+            id: "demo-and-screenshots",
+            title: "DEMO AND SCREENSHOTS",
+          },
+          {
+            id: "demo-and-screenshots1",
+            details: ["sd"],
+            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+          },
+          {
+            id: "demo-and-screenshots2",
+            details: ["sd"],
+            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+          },
+        ],
+      },
+      {
+        id: "system-information-notary",
+        title: "Sistem Administrasi Kantor Notaris",
+        date: "2024",
+        prodi: "Web Development",
+        tags: ["TypeScript", "Utility", "Tool"],
+        blocks: [
+          {
+            id: "project-description",
+            title: "PROJECT DESCRIPTION",
+            details: [
+              "Developed and deployed a web-based food recipe recommendation system using the EASE-R collaborative filtering model to address the choice overload problem in the food recipe domain. The recommendation model was trained on 676K+ user interactions across 29K recipes and integrated into a full-stack web application built with React, Node.js, Express, and PostgreSQL through a REST API. The system was evaluated using Recall@10 and NDCG@10, achieving 0.0262 Recall@10 and 0.0123 NDCG@10, outperforming a popularity-based recommendation baseline.",
+              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
             ],
+          },
+          {
+            id: "tech-stacks",
+            title: "TECH STACKS",
+            details: [
+              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+            ],
+          },
+          {
+            id: "demo-and-screenshots",
+            title: "DEMO AND SCREENSHOTS",
+          },
+          {
+            id: "demo-and-screenshots1",
+            details: ["sd"],
+            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+          },
+          {
+            id: "demo-and-screenshots2",
+            details: ["sd"],
+            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
           },
         ],
       },
@@ -210,64 +249,34 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         tags: ["TypeScript", "Utility", "Tool"],
         blocks: [
           {
-            id: "academic-summary",
-            title: "ACADEMIC SUMMARY",
+            id: "project-description",
+            title: "PROJECT DESCRIPTION",
             details: [
-              "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-              "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+              "Developed and deployed a web-based food recipe recommendation system using the EASE-R collaborative filtering model to address the choice overload problem in the food recipe domain. The recommendation model was trained on 676K+ user interactions across 29K recipes and integrated into a full-stack web application built with React, Node.js, Express, and PostgreSQL through a REST API. The system was evaluated using Recall@10 and NDCG@10, achieving 0.0262 Recall@10 and 0.0123 NDCG@10, outperforming a popularity-based recommendation baseline.",
+              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
             ],
           },
           {
-            id: "student-organization",
-            title: "STUDENT ORGANIZATION",
+            id: "tech-stacks",
+            title: "TECH STACKS",
             details: [
-              "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-              "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-            ],
-            images: [
-              // {
-              //   src: "/images/thesis-1.jpg",
-              //   alt: "EASE-R diagram",
-              //   ratio: 4 / 3,
-              // },
-              // {
-              //   src: "/images/thesis-2.jpg",
-              //   alt: "Evaluation results",
-              //   ratio: 1,
-              // },
+              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
             ],
           },
-        ],
-      },
-    ],
-  },
-  skills: {
-    id: "skills",
-    title: "SKILLS OVERVIEW",
-    tabLabel: "Skills",
-    color: "#B84F98",
-    date: "2026",
-    prodi: "Technical Competencies",
-    tags: ["React", "Next.js", "Python", "SQL"],
-    blocks: [
-      {
-        id: "academic-summary",
-        title: "ACADEMIC SUMMARY",
-        details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-        ],
-      },
-      {
-        id: "student-organization",
-        title: "STUDENT ORGANIZATION",
-        details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-        ],
-        images: [
-          // { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
-          // { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
+          {
+            id: "demo-and-screenshots",
+            title: "DEMO AND SCREENSHOTS",
+          },
+          {
+            id: "demo-and-screenshots1",
+            details: ["sd"],
+            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+          },
+          {
+            id: "demo-and-screenshots2",
+            details: ["sd"],
+            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+          },
         ],
       },
     ],

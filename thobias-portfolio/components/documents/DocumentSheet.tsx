@@ -42,11 +42,11 @@ export default function DocumentSheet({ section }: DocumentSheetProps) {
       >
         {/* 1. COLORED FOLDER SHEET BACKING (Sits behind at z-0) */}
         <div
-          className="absolute flex-1 -mr-4  -inset-3 -top-10 -right-4 -bottom-4 -left-4  rounded-l-md shadow-2xl z-10 border-l border-y border-white/20"
+          className="absolute flex-1 mr-6  -inset-3 -top-10 -bottom-4 -left-4  rounded-l-md shadow-2xl z-10 border-l border-y border-white/20"
           style={{ backgroundColor: section.color }}
         />
         {/* 2. BEIGE NOTEBOOK PAPER SHEET (Sits on top at z-10) */}
-        <div className="relative z-10 w-full bg-[#FFF9E6] text-[#2D2825] p-6 sm:p-8 rounded-sm shadow-xl border border-[#E6D5B8]">
+        <div className="relative z-10 mr-6 w-full bg-[#FFF9E6] text-[#2D2825] p-6 sm:p-8 rounded-sm shadow-xl border border-[#E6D5B8]">
           {/* Left Margin Ring-Binder Holes */}
           <div className="absolute left-2 sm:left-4 top-4 bottom-4 flex flex-col justify-between py-2 pointer-events-none">
             {Array.from({ length: 14 }).map((_, i) => (
