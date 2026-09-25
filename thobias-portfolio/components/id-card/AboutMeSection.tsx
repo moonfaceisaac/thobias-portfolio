@@ -24,11 +24,11 @@ export default function AboutMeSection({
 }: AboutMeSectionProps) {
   const isMobile = useMediaQuery("(max-width: 767px)");
   return (
-    <div className="relative w-full max-w-[420px] mx-auto flex flex-col items-center">
+    <div className="relative w-full min-w-[100px] max-w-[420px] mx-auto flex flex-col items-center">
       {/* Container holding the pinned stack */}
       <div
         className={`relative w-full ${
-          isUnclipped ? "min-h-[500px]" : "min-h-[300px]"
+          isUnclipped ? "min-h-[750px]" : "min-h-[400px]"
         } flex items-center justify-center pt-4 transition-[min-height] duration-500 ease-in-out`}
       >
         {/* Paperclip */}
@@ -53,8 +53,6 @@ export default function AboutMeSection({
             priority
           />
         </motion.div>
-
-        Thobias Pic
         <motion.div
           onClick={onToggleUnclip}
           className="absolute z-30 cursor-pointer"
@@ -117,7 +115,7 @@ export default function AboutMeSection({
           initial={false}
           animate={
             isUnclipped
-              ? { x: 0, y: isMobile ? 120 : 200, opacity: 1 }
+              ? { x: 0, y: isMobile ? 200 : 200, opacity: 1 }
               : { x: 0, y: 0, opacity: 0.95 }
           }
           transition={{ type: "spring", stiffness: 180, damping: 22 }}

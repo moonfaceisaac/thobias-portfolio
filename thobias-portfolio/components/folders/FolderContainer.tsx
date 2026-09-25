@@ -51,8 +51,8 @@ export default function FolderContainer() {
     <div className="w-full  mx-auto px-4 py-6">
       {/* Desktop: Side-by-Side (Dossier Left, ID Right) | Mobile: Stacked */}
       {/* <div className="flex flex-col md:flex-row items-start justify-start gap-8"> */}
-      <div className="flex flex-col md:flex-row gap-8 justify-between">
-        <div className="w-full md:w-[35%] flex justify-center">
+      <div className="flex flex-col md:flex-row gap-8 justify-between items-start">
+        <div className="w-full md:w-[45%] flex justify-center">
           {/* <div className="w-full md-flex-[2]"> */}
           <AboutMeSection
             isUnclipped={isUnclipped}
@@ -60,7 +60,7 @@ export default function FolderContainer() {
           />
         </div>
         {/* DOSSIER SECTION (Takes larger width on desktop) */}
-        <div className="relative z-0 h-[200px] w-full md:w-[65%] max-w-[1000px] flex flex-row items-start">
+        <div className="relative pl-10 z-0 h-full w-full md:w-[55%] max-w-[1000px] bg-[#FF894A] flex flex-row items-start">
           {/* <div className="w-full md:flex-[3]"> */}
           {/* Vertical Folder Body */}
 
