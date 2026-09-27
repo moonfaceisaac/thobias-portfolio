@@ -51,7 +51,7 @@ export default function FolderContainer() {
     <div className="w-full  mx-auto px-4 py-6">
       {/* Desktop: Side-by-Side (Dossier Left, ID Right) | Mobile: Stacked */}
       {/* <div className="flex flex-col md:flex-row items-start justify-start gap-8"> */}
-      <div className="flex flex-col md:flex-row gap-8 justify-between items-start">
+      <div className="flex flex-col sm:flex-row gap-8 justify-between items-start">
         <div className="w-full md:w-[45%] flex justify-center">
           {/* <div className="w-full md-flex-[2]"> */}
           <AboutMeSection
@@ -60,7 +60,7 @@ export default function FolderContainer() {
           />
         </div>
         {/* DOSSIER SECTION (Takes larger width on desktop) */}
-        <div className="relative pl-10 z-0 h-full w-full md:w-[55%] max-w-[1000px] bg-[#FF894A] flex flex-row items-start">
+        <div className="relative pl-13 z-0 h-full w-full md:w-[55%] max-w-[1000px] bg-[#FF894A] flex flex-row items-start">
           {/* <div className="w-full md:flex-[3]"> */}
           {/* Vertical Folder Body */}
 
@@ -111,7 +111,7 @@ export default function FolderContainer() {
                 <motion.div
                   key="cover"
                   onClick={() => setActiveTabId("education")}
-                  className="absolute mr-14 h-[1000px] -inset-3 -bottom-4 -left-4 z-0 flex flex-col min-h-screen justify-between items-center cursor-pointer"
+                  className="absolute mr-14 h-[1000px] ml-3 -inset-3 -bottom-4 -left-4 z-0 flex flex-col min-h-screen justify-between items-center cursor-pointer"
                   style={{
                     transformOrigin: "left center",
                     backfaceVisibility: "hidden",
@@ -157,7 +157,7 @@ export default function FolderContainer() {
             </AnimatePresence>
           </div>
           {/* Right Vertical Tabs (Navbar) */}
-          <div className="relative flex flex-col gap-2 pt-20 -ml-5  z-10">
+          <div className="relative flex flex-col gap-2 pt-20 -ml-5 mr-1  z-10">
             {TABS.map((tab) => (
               <FolderTab
                 key={tab.id}

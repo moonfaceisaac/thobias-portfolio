@@ -203,7 +203,7 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             title: "TECH STACK & ARCHITECTURE",
             details: [
               "Dart · Flutter · Firebase (Cloud Firestore)",
-              "The entire frontend was built with Flutter (Dart), with Firebase handling authentication and database operations through Cloud Firestore."
+              "The entire frontend was built with Flutter (Dart), with Firebase handling authentication and database operations through Cloud Firestore.",
             ],
           },
           {
@@ -273,7 +273,7 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             title: "TECH STACK & ARCHITECTURE",
             details: [
               "React.js · JavaScript · Tailwind CSS · Java Spring Boot · MongoDB · Python · Flask",
-              "The React frontend communicates with a Java Spring Boot backend that connects to MongoDB for storing student, teacher, and parent data. A separate Flask service hosts the model API, which the frontend calls for risk predictions."
+              "The React frontend communicates with a Java Spring Boot backend that connects to MongoDB for storing student, teacher, and parent data. A separate Flask service hosts the model API, which the frontend calls for risk predictions.",
             ],
           },
 
@@ -290,25 +290,39 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         ],
       },
       {
-        id: "bimbel-gms-sunggal",
-        title: "Bimbel GMS Sunggal",
+        id: "tutoring-gms-sunggal-lms",
+        title: "Tutoring GMS Sunggal LMS",
         date: "2025",
         prodi: "Software Engineering",
         tags: ["React", "LMS", "Web System"],
         blocks: [
           {
-            id: "project-description",
-            title: "PROJECT DESCRIPTION",
+            id: "overview",
+            title: "OVERVIEW",
             details: [
-              "Developed and deployed a web-based food recipe recommendation system using the EASE-R collaborative filtering model to address the choice overload problem in the food recipe domain. The recommendation model was trained on 676K+ user interactions across 29K recipes and integrated into a full-stack web application built with React, Node.js, Express, and PostgreSQL through a REST API. The system was evaluated using Recall@10 and NDCG@10, achieving 0.0262 Recall@10 and 0.0123 NDCG@10, outperforming a popularity-based recommendation baseline.",
-              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+              "A mobile application built for a tutoring company in Medan that teaches enrolled students across a range of subjects. The app features multi-role access, class and student management, teacher administration, user profiles, and an attendance system, all unified under a single role-aware interface.",
             ],
           },
           {
-            id: "tech-stacks",
-            title: "TECH STACKS",
+            id: "problem-&-approach",
+            title: "PROBLEM & APPROACH",
             details: [
-              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+              "The client's existing workflow handled attendance and class management entirely on paper, which made tracking student progress, teacher schedules, and class rosters difficult and error-prone. I designed a clean, simple UI/UX that lets each role complete its tasks efficiently, with data interconnected across all roles to enable fast, real-time synchronization.",
+            ],
+          },
+          {
+            id: "my-role",
+            title: "MY ROLE",
+            details: [
+              "Solo developer across the entire mobile app, from frontend implementation to Firebase integration.",
+            ],
+          },
+          {
+            id: "tech-stack-&-architecture",
+            title: "TECH STACK & ARCHITECTURE",
+            details: [
+              "Dart · Flutter · Firebase (Cloud Firestore)",
+              "The entire frontend was built with Flutter (Dart), with Firebase handling authentication and database operations through Cloud Firestore.",
             ],
           },
           {
@@ -329,24 +343,38 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
       },
       {
         id: "system-information-notary",
-        title: "Sistem Administrasi Kantor Notaris",
+        title: "Information System/Administration for Notary Office",
         date: "2024",
         prodi: "Web Development",
         tags: ["TypeScript", "Utility", "Tool"],
         blocks: [
           {
-            id: "project-description",
-            title: "PROJECT DESCRIPTION",
+            id: "overview",
+            title: "OVERVIEW",
             details: [
-              "Developed and deployed a web-based food recipe recommendation system using the EASE-R collaborative filtering model to address the choice overload problem in the food recipe domain. The recommendation model was trained on 676K+ user interactions across 29K recipes and integrated into a full-stack web application built with React, Node.js, Express, and PostgreSQL through a REST API. The system was evaluated using Recall@10 and NDCG@10, achieving 0.0262 Recall@10 and 0.0123 NDCG@10, outperforming a popularity-based recommendation baseline.",
-              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+              "A web-based administration and information system built for a notary office transitioning to a digitalized workflow for both internal operations and client communication. The app features multi-role access (client, staff, notary), service request management, notarial deed document handling, deed status tracking for clients, and an activity log that tracks staff tasks, visible to the notary role only.",
             ],
           },
           {
-            id: "tech-stacks",
-            title: "TECH STACKS",
+            id: "problem-&-approach",
+            title: "PROBLEM & APPROACH",
             details: [
-              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+              " The notary office handled its operations manually, from recording client information to drafting notarial deeds. This workflow was slow and prone to human error. Notary administration systems have been built before, but we identified a recurring gap: none of them integrated the client directly into the workflow. We addressed this by bringing clients into the system as first-class users, giving them the ability to submit service requests, track deed status, and interact with the office, while staff and notaries manage the internal pipeline through a unified dashboard.",
+            ],
+          },
+          {
+            id: "my-role",
+            title: "MY ROLE",
+            details: [
+              "Singlehandedly designed the database ERD, data flow, and UI/UX, then built the web app end to end from full-stack implementation to hosting, all under a tight timeline.",
+            ],
+          },
+          {
+            id: "tech-stack-&-architecture",
+            title: "TECH STACK & ARCHITECTURE",
+            details: [
+              "React.js · JavaScript · Tailwind CSS · Node.js · Express · PostgreSQL · Prisma",
+              "Built the frontend with React.js and Tailwind CSS. The backend runs on Node.js with Express, communicating with PostgreSQL through Prisma as the ORM.",
             ],
           },
           {
@@ -366,25 +394,39 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         ],
       },
       {
-        id: "smoke-activity-detector",
+        id: "smoking-activity-detector",
         title: "Smoking Activity Detector",
         date: "2024",
         prodi: "Web Development",
         tags: ["TypeScript", "Utility", "Tool"],
         blocks: [
           {
-            id: "project-description",
-            title: "PROJECT DESCRIPTION",
+            id: "overview",
+            title: "OVERVIEW",
             details: [
-              "Developed and deployed a web-based food recipe recommendation system using the EASE-R collaborative filtering model to address the choice overload problem in the food recipe domain. The recommendation model was trained on 676K+ user interactions across 29K recipes and integrated into a full-stack web application built with React, Node.js, Express, and PostgreSQL through a REST API. The system was evaluated using Recall@10 and NDCG@10, achieving 0.0262 Recall@10 and 0.0123 NDCG@10, outperforming a popularity-based recommendation baseline.",
-              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+              "A web-based demonstration app showcasing CNN (Convolutional Neural Network) performance on detecting smoking activity from uploaded images. Built for research purposes as part of a machine learning course final assignment. The app features image upload, a backend API for inference, model accuracy display, and a history of past uploads and results.",
             ],
           },
           {
-            id: "tech-stacks",
-            title: "TECH STACKS",
+            id: "problem-&-approach",
+            title: "PROBLEM & APPROACH",
             details: [
-              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+              "In countries like Indonesia, smoking activity is rampant, particularly in public areas where it's officially prohibited. Despite clear signage, compliance is low, and monitoring these areas manually is difficult and inconsistent. This project demonstrates how a simple CNN-based classifier can detect smoking activity from images, showing one possible path toward automated monitoring at scale.",
+            ],
+          },
+          {
+            id: "my-role",
+            title: "MY ROLE",
+            details: [
+              "In countries like Indonesia, smoking activity is rampant, particularly in public areas where it's officially prohibited. Despite clear signage, compliance is low, and monitoring these areas manually is difficult and inconsistent. This project demonstrates how a simple CNN-based classifier can detect smoking activity from images, showing one possible path toward automated monitoring at scale.",
+            ],
+          },
+          {
+            id: "tech-stacks-&-architecture",
+            title: "TECH STACKS & ARCHITECTURE",
+            details: [
+              "Python · NumPy · Pandas · Jupyter · Hugging Face · Gradio",
+              "The trained CNN is deployed as a Hugging Face Space using Gradio for the web interface, allowing users to upload images and receive classification results directly in the browser.",
             ],
           },
           {
@@ -404,25 +446,39 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         ],
       },
       {
-        id: "timezone-converter",
-        title: "TimeZone Converter",
+        id: "jamentime-(timezone converter)",
+        title: "Jamentime (Timezone Converter)",
         date: "2024",
         prodi: "Web Development",
         tags: ["TypeScript", "Utility", "Tool"],
         blocks: [
           {
-            id: "project-description",
-            title: "PROJECT DESCRIPTION",
+            id: "overview",
+            title: "OVERVIEW",
             details: [
-              "Developed and deployed a web-based food recipe recommendation system using the EASE-R collaborative filtering model to address the choice overload problem in the food recipe domain. The recommendation model was trained on 676K+ user interactions across 29K recipes and integrated into a full-stack web application built with React, Node.js, Express, and PostgreSQL through a REST API. The system was evaluated using Recall@10 and NDCG@10, achieving 0.0262 Recall@10 and 0.0123 NDCG@10, outperforming a popularity-based recommendation baseline.",
-              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+              "A lightweight web-based utility that converts time between time zones. Users select a source zone and a target zone and instantly see the converted time, along with a live comparison of the current time in both zones.",
             ],
           },
           {
-            id: "tech-stacks",
-            title: "TECH STACKS",
+            id: "problem-&-approach",
+            title: "PROBLEM & APPROACH",
             details: [
-              "Tech Stacks: Python, FastAPI, PostgreSQL, Prisma, JavaScript, React, Node.js.",
+              "Converting time across zones manually is surprisingly error-prone, especially when daylight savings transitions are involved. Most existing tools are either bloated with ads and features, or over-engineered for a task that should take seconds. I built a focused single-purpose tool: pick two zones, see the converted time, done. No accounts, no tracking, no bloat.",
+            ],
+          },
+          {
+            id: "my-role",
+            title: "MY ROLE",
+            details: [
+              "Solo developer. Built the frontend and time zone conversion logic from scratch using vanilla JavaScript, with no framework or library dependency.",
+            ],
+          },
+          {
+            id: "tech-stack-&-architecture",
+            title: "Tech Stack & Architecture",
+            details: [
+              "JavaScript · HTML · CSS",
+              "A static client-side application. No framework, no build step, no backend. Time zone logic is implemented directly in JavaScript, with all computation happening in the browser."
             ],
           },
           {
