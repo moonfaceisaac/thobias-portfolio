@@ -38,7 +38,7 @@ export default function DocumentSheet({ section }: DocumentSheetProps) {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2 }}
-        className="relative w-[330px] sm:w-full mt-15 flex min-h-[800px]"
+        className="relative w-full mt-15 flex min-h-[800px]"
       >
         {/* 1. COLORED FOLDER SHEET BACKING (Sits behind at z-0) */}
         <div
@@ -46,7 +46,7 @@ export default function DocumentSheet({ section }: DocumentSheetProps) {
           style={{ backgroundColor: section.color }}
         />
         {/* 2. BEIGE NOTEBOOK PAPER SHEET (Sits on top at z-10) */}
-        <div className="relative -ml-8 z-10 mr-4 w-full bg-[#FFF9E6] text-[#2D2825] text-[10px] tracking-tight hyphens-auto  text-justify sm:p-8 pt-4 rounded-sm shadow-xl border border-[#E6D5B8]" lang="en">
+        <div className="relative max-sm:flex-1 sm:-ml-8 -ml-11 z-10 mr-4 w-full bg-[#FFF9E6] text-[#2D2825] text-[10px] tracking-tight hyphens-auto  text-justify sm:p-8 pt-4 rounded-sm shadow-xl border border-[#E6D5B8]" lang="en">
           {/* Left Margin Ring-Binder Holes */}
           <div className="absolute left-2 sm:left-4 top-4 bottom-4 flex flex-col justify-between py-2 pointer-events-none">
             {Array.from({ length: 14 }).map((_, i) => (
