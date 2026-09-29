@@ -10,16 +10,21 @@ export default function SectionImageBody({ images }: SectionImageBodyProps) {
 
   return (
     // <div className="flex flex-row gap-4 justify-center flex-wrap">
-    <div className="flex flex-col gap-4 justify-center">
-      {images.map((img, i) => (
-        <TapedImage
-          key={i}
-          src={img.src}
-          alt={img.alt}
-          ratio={img.ratio}
-          className={images.length === 1 ? "w-full max-w-md" : "flex-1 min-w-0"}
-        />
-      ))}
+    
+      <div className={`flex flex-row gap-4  justify-center  text-center ${images.length === 1 ? "items-center" : "items"}`}>
+        {images.map((img, i) => (
+          <TapedImage
+            key={i}
+            src={img.src}
+            alt={img.alt}
+            ratio={img.ratio}
+            className={
+              images.length === 1
+                ? "w-full max-w-md"
+                : "flex-1 min-w-0"
+            }
+          />
+        ))}
     </div>
   );
 }

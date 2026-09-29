@@ -100,28 +100,50 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         ],
       },
       {
-        id: "student-organization",
+        id: "student-organization-img",
         title: "STUDENT ORGANIZATION",
+        images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+      },
+      {
+        id: "student-organization",
         details: [
           "I joined Mikroskil English Club (MEC) in my first semester. MEC is one of the student organizations at my university that focuses on helping students build confidence in speaking English through public speaking and competitive debating. The club is divided into two divisions: Public Speaking and Debate. I joined the Public Speaking Division during my first year before switching to the Debate Division, where I remained until I graduated.",
-          "During my time in the Debate Division, I participated in numerous debate competitions while also serving as the club's Event Organizer for one year. In this role, I contributed ideas for club events, managed event administration, coordinated committees, and moderated several events organized by the club.",
-          "Among all the competitions I participated in, my highest achievement was becoming a Regional Finalist at the National University Debating Championship (NUDC) 2024 in North Sumatra. Advancing to the regional finals qualified my team to represent the region at the National NUDC 2024. Besides NUDC, I also reached the semifinal stage in several other university debate competitions.",
         ],
+      },
+      {
+        id: "student-organization-img-2",
         images: [
-          { src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 },
-          { src: mecComp1, alt: "MEC-COMP-1", ratio: 4 / 3 },
-          { src: mecComp2, alt: "MEC-COMP-2", ratio: 4 / 3 },
-          { src: mecComp3, alt: "MEC-COMP-3", ratio: 4 / 3 },
+          { src: mecComp3, alt: "MEC-COMP-1", ratio: 4 / 3 },
+          { src: mecComp1, alt: "MEC-COMP-2", ratio: 4 / 3 },
+        ],
+      },
+      {
+        id: "student-organization-2",
+        details: [
+          "During my time in the Debate Division, I participated in numerous debate competitions while also serving as the club's Event Organizer for one year. In this role, I contributed ideas for club events, managed event administration, coordinated committees, and moderated several events organized by the club.",
+        ],
+      },
+      {
+        id: "student-organization-img-3",
+        images: [{ src: mecComp2, alt: "MEC-COMP-3", ratio: 4 / 3 }],
+      },
+      {
+        id: "student-organization-3",
+        details: [
+          "Among all the competitions I participated in, my highest achievement was becoming a Regional Finalist at the National University Debating Championship (NUDC) 2024 in North Sumatra. Advancing to the regional finals qualified my team to represent the region at the National NUDC 2024. Besides NUDC, I also reached the semifinal stage in several other university debate competitions.",
         ],
       },
       {
         id: "extra-activites-campus-related",
         title: "EXTRA ACTIVITIES",
+        images: [{ src: gradCeremony, alt: "GRAD-CEREMONY-1", ratio: 4 / 3 }],
+      },
+      {
+        id: "extra-activites-campus-related-2",
         details: [
           "Outside Student Organization, I was selected twice in a row as a committee member for my university's graduation ceremony. My responsibility was to serve as the official name announcer, announcing the names of graduates during the ceremony.",
           "In my 7th semester, I was hired as a Lecturer's Computer Lab Assistant. My responsibilities included preparing laboratory devices before each class, maintaining a conducive learning environment, assisting lecturers in delivering course materials and assignments, and helping students understand the practical materials during lab sessions.",
         ],
-        images: [{ src: gradCeremony, alt: "GRAD-CEREMONY-1", ratio: 4 / 3 }],
       },
     ],
   },
@@ -207,34 +229,26 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             ],
           },
           {
-            id: "sign-in",
-            images: [{ src: signIn, alt: "Sign in page", ratio: 4 / 3 }],
-          },
-          {
-            id: "home-interacted",
+            id: "demo-&-screenshots",
+            title: "DEMO & SCREENSHOTS",
             images: [
+              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
               {
                 src: homeRecommended,
+                alt: "Home Interacted Page",
+                ratio: 4 / 3,
+              },
+              {
+                src: homeRecSys,
                 alt: "Home Interacted Page",
                 ratio: 4 / 3,
               },
             ],
           },
           {
-            id: "model-performance",
-            title: "EASE-R MODEL PERFORMANCE ",
-          },
-          {
-            id: "performance-1",
-            details: ["sd"],
+            id: "ease-r-model-performance",
             images: [
               { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
-            ],
-          },
-          {
-            id: "performance-2",
-            details: ["sd"],
-            images: [
               { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
             ],
           },
@@ -276,16 +290,24 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
               "The React frontend communicates with a Java Spring Boot backend that connects to MongoDB for storing student, teacher, and parent data. A separate Flask service hosts the model API, which the frontend calls for risk predictions.",
             ],
           },
-
           {
-            id: "demo-and-screenshots1",
-            details: ["sd"],
-            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+            id: "demo-&-screenshots",
+            title: "DEMO & SCREENSHOTS",
+            images: [
+              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
+              {
+                src: homeRecommended,
+                alt: "Home Interacted Page",
+                ratio: 4 / 3,
+              },
+            ],
           },
           {
-            id: "demo-and-screenshots2",
-            details: ["sd"],
-            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+            id: "ease-r-model-performance",
+            images: [
+              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
+              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+            ],
           },
         ],
       },
@@ -326,18 +348,23 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             ],
           },
           {
-            id: "demo-and-screenshots",
-            title: "DEMO AND SCREENSHOTS",
+            id: "demo-&-screenshots",
+            title: "DEMO & SCREENSHOTS",
+            images: [
+              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
+              {
+                src: homeRecommended,
+                alt: "Home Interacted Page",
+                ratio: 4 / 3,
+              },
+            ],
           },
           {
-            id: "demo-and-screenshots1",
-            details: ["sd"],
-            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
-          },
-          {
-            id: "demo-and-screenshots2",
-            details: ["sd"],
-            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+            id: "ease-r-model-performance",
+            images: [
+              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
+              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+            ],
           },
         ],
       },
@@ -378,18 +405,23 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             ],
           },
           {
-            id: "demo-and-screenshots",
-            title: "DEMO AND SCREENSHOTS",
+            id: "demo-&-screenshots",
+            title: "DEMO & SCREENSHOTS",
+            images: [
+              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
+              {
+                src: homeRecommended,
+                alt: "Home Interacted Page",
+                ratio: 4 / 3,
+              },
+            ],
           },
           {
-            id: "demo-and-screenshots1",
-            details: ["sd"],
-            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
-          },
-          {
-            id: "demo-and-screenshots2",
-            details: ["sd"],
-            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+            id: "ease-r-model-performance",
+            images: [
+              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
+              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+            ],
           },
         ],
       },
@@ -430,18 +462,23 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             ],
           },
           {
-            id: "demo-and-screenshots",
-            title: "DEMO AND SCREENSHOTS",
+            id: "demo-&-screenshots",
+            title: "DEMO & SCREENSHOTS",
+            images: [
+              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
+              {
+                src: homeRecommended,
+                alt: "Home Interacted Page",
+                ratio: 4 / 3,
+              },
+            ],
           },
           {
-            id: "demo-and-screenshots1",
-            details: ["sd"],
-            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
-          },
-          {
-            id: "demo-and-screenshots2",
-            details: ["sd"],
-            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+            id: "ease-r-model-performance",
+            images: [
+              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
+              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+            ],
           },
         ],
       },
@@ -478,22 +515,27 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             title: "Tech Stack & Architecture",
             details: [
               "JavaScript · HTML · CSS",
-              "A static client-side application. No framework, no build step, no backend. Time zone logic is implemented directly in JavaScript, with all computation happening in the browser."
+              "A static client-side application. No framework, no build step, no backend. Time zone logic is implemented directly in JavaScript, with all computation happening in the browser.",
             ],
           },
           {
-            id: "demo-and-screenshots",
-            title: "DEMO AND SCREENSHOTS",
+            id: "demo-&-screenshots",
+            title: "DEMO & SCREENSHOTS",
+            images: [
+              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
+              {
+                src: homeRecommended,
+                alt: "Home Interacted Page",
+                ratio: 4 / 3,
+              },
+            ],
           },
           {
-            id: "demo-and-screenshots1",
-            details: ["sd"],
-            images: [{ src: mecEvents1, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
-          },
-          {
-            id: "demo-and-screenshots2",
-            details: ["sd"],
-            images: [{ src: mecComp2, alt: "MEC-EVENT-1", ratio: 4 / 3 }],
+            id: "ease-r-model-performance",
+            images: [
+              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
+              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+            ],
           },
         ],
       },
