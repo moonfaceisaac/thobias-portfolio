@@ -291,22 +291,22 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             ],
           },
           {
-            id: "demo-&-screenshots",
+            id: "demo-&-screenshots-learntic",
             title: "DEMO & SCREENSHOTS",
             images: [
-              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
+              { src: dasborGuru, alt: "Dasbor Guru", ratio: 4 / 3 },
               {
-                src: homeRecommended,
-                alt: "Home Interacted Page",
+                src: dasborGuru2,
+                alt: "Dasbor Guru 2",
                 ratio: 4 / 3,
               },
             ],
           },
           {
-            id: "ease-r-model-performance",
+            id: "demo-&-screenshots-learntic-2",
             images: [
-              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
-              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+              { src: dasborOrangTua, alt: "Dasbor Orang Tua", ratio: 4 / 3 },
+              { src: dasborSiswa, alt: "Dasbor Siswa", ratio: 4 / 3 },
             ],
           },
         ],
@@ -351,10 +351,10 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             id: "demo-&-screenshots",
             title: "DEMO & SCREENSHOTS",
             images: [
-              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
+              { src: berandaAdmin, alt: "Beranda Admin", ratio: 4 / 3 },
               {
-                src: homeRecommended,
-                alt: "Home Interacted Page",
+                src: berandaGuru,
+                alt: "Beranda Guru",
                 ratio: 4 / 3,
               },
             ],
@@ -362,8 +362,8 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
           {
             id: "ease-r-model-performance",
             images: [
-              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
-              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+              { src: berandaMurid, alt: "Beranda Murid", ratio: 4 / 3 },
+              { src: login, alt: "Login GMS", ratio: 4 / 3 },
             ],
           },
         ],
@@ -408,10 +408,10 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             id: "demo-&-screenshots",
             title: "DEMO & SCREENSHOTS",
             images: [
-              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
+              { src: dasborNotaris, alt: "Dasbor Notaris", ratio: 4 / 3 },
               {
-                src: homeRecommended,
-                alt: "Home Interacted Page",
+                src: dasborKlien,
+                alt: "Dasbor Klien",
                 ratio: 4 / 3,
               },
             ],
@@ -419,8 +419,9 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
           {
             id: "ease-r-model-performance",
             images: [
-              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
-              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+              { src: dasborStaff, alt: "Dasbor Staff", ratio: 4 / 3 },
+              { src: klienFitur1, alt: "Fitur Klien", ratio: 4 / 3 },
+              { src: loginNotaris, alt: "Login Notaris", ratio: 4 / 3 },
             ],
           },
         ],
@@ -465,19 +466,14 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             id: "demo-&-screenshots",
             title: "DEMO & SCREENSHOTS",
             images: [
-              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
-              {
-                src: homeRecommended,
-                alt: "Home Interacted Page",
-                ratio: 4 / 3,
-              },
+              { src: home, alt: "Home Page", ratio: 4 / 3 },
             ],
           },
           {
             id: "ease-r-model-performance",
             images: [
-              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
-              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
+              { src: smoking, alt: "Smoking Image", ratio: 4 / 3 },
+              { src: notSmoking, alt: "Not Smoking Image", ratio: 4 / 3 },
             ],
           },
         ],
@@ -516,25 +512,6 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
             details: [
               "JavaScript · HTML · CSS",
               "A static client-side application. No framework, no build step, no backend. Time zone logic is implemented directly in JavaScript, with all computation happening in the browser.",
-            ],
-          },
-          {
-            id: "demo-&-screenshots",
-            title: "DEMO & SCREENSHOTS",
-            images: [
-              { src: signIn, alt: "Sign in page", ratio: 4 / 3 },
-              {
-                src: homeRecommended,
-                alt: "Home Interacted Page",
-                ratio: 4 / 3,
-              },
-            ],
-          },
-          {
-            id: "ease-r-model-performance",
-            images: [
-              { src: result1, alt: "Model Performance Result", ratio: 4 / 3 },
-              { src: result2, alt: "Model Performance Result2", ratio: 4 / 3 },
             ],
           },
         ],
