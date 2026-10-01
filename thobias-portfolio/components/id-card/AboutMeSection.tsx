@@ -9,6 +9,16 @@ import idCardSvg from "../../assets/svg/id-card-final-4.svg";
 import paperclipSvg from "../../assets/svg/paperclip-clipped.svg";
 import cardTexture from "../../assets/textures/card-texture.png";
 import thobiasPic from "../../assets/svg/thobiaspic.svg";
+import businessCard from "../../assets/svg/business-card-no-logo-final.svg";
+
+import SocialLogo from "./SocialLogo";
+
+// Business Cards
+// Contact Logos
+import linkedinSVG from "../../assets/svg/linkedin-final.svg";
+import githubSVG from "../../assets/svg/github-logo-final.svg";
+import emailSVG from "../../assets/svg/email-open-final.svg";
+import instagramSVG from "../../assets/svg/instagram-final.svg";
 
 // Design-space dimensions. Everything inside is authored at this size.
 const DESIGN_W = 500;
@@ -60,7 +70,7 @@ export default function AboutMeSection({
           {/* Paperclip */}
           <motion.div
             onClick={onToggleUnclip}
-            className="absolute z-40 cursor-pointer hover:scale-110 transition-transform"
+            className="absolute z-50 cursor-pointer hover:scale-110 transition-transform"
             initial={false}
             animate={
               isUnclipped
@@ -83,11 +93,11 @@ export default function AboutMeSection({
           {/* Thobias photo */}
           <motion.div
             onClick={onToggleUnclip}
-            className="absolute z-30 cursor-pointer"
+            className="absolute z-40 cursor-pointer"
             initial={false}
             animate={
               isUnclipped
-                ? { x: -120, y: -180, scale: 1 }
+                ? { x: -120, y: -283, scale: 1 }
                 : { x: -120, y: -50, scale: 1 }
             }
             transition={{ type: "spring", stiffness: 180, damping: 22 }}
@@ -106,11 +116,11 @@ export default function AboutMeSection({
           {/* ID Card */}
           <motion.div
             onClick={onToggleUnclip}
-            className="absolute z-20 cursor-pointer drop-shadow-2xl"
+            className="absolute z-30 cursor-pointer drop-shadow-2xl"
             initial={false}
             animate={
               isUnclipped
-                ? { x: 0, y: -130, scale: 1 }
+                ? { x: 0, y: -235, scale: 1 }
                 : { x: 0, y: 0, scale: 1 }
             }
             transition={{ type: "spring", stiffness: 180, damping: 22 }}
@@ -134,6 +144,73 @@ export default function AboutMeSection({
             </div>
           </motion.div>
 
+          {/* BUSINESS CARD */}
+          <motion.div
+            onClick={onToggleUnclip}
+            className="absolute z-20 cursor-pointer drop-shadow-2xl"
+            initial={false}
+            animate={
+              isUnclipped
+                ? { x: 0, y: 100, scale: 1 }
+                : { x: 0, y: 0, scale: 1 }
+            }
+            transition={{ type: "spring", stiffness: 180, damping: 22 }}
+          >
+            <div className="relative z-10 w-[500px] h-[520px]">
+              <Image
+                src={businessCard}
+                alt="Thobias business card"
+                fill
+                className="object-contain"
+                priority
+              />
+              <div className="absolute inset-0 pointer-events-none opacity-100 mix-blend-overlay">
+                <Image
+                  src={cardTexture}
+                  alt="Card texture"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              {/* GITHUB */}
+              <SocialLogo
+                href="https://github.com/moonfaceisaac"
+                src={githubSVG}
+                alt="Github"
+                label="Github profile"
+                className="translate-y-69 translate-x-10"
+                isUnclippedx={isUnclipped}
+              />
+              {/* LINKEDIN */}
+              <SocialLogo
+                href="https://www.linkedin.com/in/thobias-zandisko-panjaitan-437452225"
+                src={linkedinSVG}
+                alt="LinkedIn"
+                label="LinkedIn profile"
+                className="translate-y-78 translate-x-10"
+                isUnclippedx={isUnclipped}
+              />
+              {/* EMAIL */}
+              <SocialLogo
+                href="thoxir058@gmail.com"
+                src={emailSVG}
+                alt="Email"
+                label="Email Address"
+                className="translate-y-86 translate-x-10"
+                isUnclippedx={isUnclipped}
+              />
+              {/* INSTAGRAM */}
+              <SocialLogo
+                href="https://www.instagram.com/thobtobitob"
+                src={instagramSVG}
+                alt="Instagram"
+                label="Instagram Profile"
+                className="translate-y-94 translate-x-10"
+                isUnclippedx={isUnclipped}
+              />{" "}
+            </div>
+          </motion.div>
+
           {/* About Me Sheet */}
           <motion.div
             onClick={onToggleUnclip}
@@ -141,7 +218,7 @@ export default function AboutMeSection({
             initial={false}
             animate={
               isUnclipped
-                ? { x: 0, y: 200, opacity: 1 }
+                ? { x: 0, y: 430, opacity: 1 }
                 : { x: 0, y: 0, opacity: 0.95 }
             }
             transition={{ type: "spring", stiffness: 180, damping: 22 }}
