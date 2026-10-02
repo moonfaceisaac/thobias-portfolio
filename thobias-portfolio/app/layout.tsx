@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Caladea, Changa_One } from 'next/font/google';
 import './globals.css';
+import { LightboxProvider } from '@/components/Lightbox';
 
 const caladea = Caladea({
   weight: ['400', '700'],
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${caladea.variable} ${changaOne.variable}`}>
       <body className="antialiased bg-[#252424] text-white min-h-screen">
-        {children}
+        <LightboxProvider>{children}</LightboxProvider>
       </body>
     </html>
   );

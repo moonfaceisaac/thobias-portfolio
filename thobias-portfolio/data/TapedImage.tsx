@@ -3,7 +3,7 @@
 import Image from "next/image";
 import tapeSvg from "@/assets/svg/tape.svg"; // adjust path
 import type { StaticImageData } from "next/image";
-
+import { useLightbox } from "@/components/Lightbox";
 
 interface TapedImageProps {
   src: string | StaticImageData;
@@ -18,8 +18,13 @@ export default function TapedImage({
   ratio = 4 / 3,
   className = "",
 }: TapedImageProps) {
+  const { open } = useLightbox();
   return (
-    <div className={`relative ${className}`} style={{ aspectRatio: ratio }}>
+    <div
+      className={`relative ${className} hover:cursor-zoom-out`}
+      style={{ aspectRatio: ratio }}
+      onClick={() => open({ src, alt })}
+    >
       {/* Photo */}
       <Image
         src={src}
