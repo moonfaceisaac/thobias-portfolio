@@ -5,7 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import aboutMeSvg from "../../assets/svg/about-me2.svg";
-import idCardSvg from "../../assets/svg/id-card-final-4.svg";
+import idCardSvg from "../../assets/svg/id-card-final-4-nospec.svg";
+import specText from "../../assets/svg/specialization-text.svg";
 import paperclipSvg from "../../assets/svg/paperclip-clipped.svg";
 import paperclipUnclipSvg from "../../assets/svg/paperclip-unclipped.svg";
 import cardTexture from "../../assets/textures/card-texture.png";
@@ -24,7 +25,7 @@ import instagramSVG from "../../assets/svg/instagram-final.svg";
 // Design-space dimensions. Everything inside is authored at this size.
 const DESIGN_W = 500;
 const DESIGN_H_COLLAPSED = 400;
-const DESIGN_H_UNCLIPPED = 750;
+const DESIGN_H_UNCLIPPED = 1200;
 
 interface AboutMeSectionProps {
   isUnclipped: boolean;
@@ -55,7 +56,7 @@ export default function AboutMeSection({
   return (
     <div
       ref={wrapperRef}
-      className="relative w-full max-w-[500px] mx-auto mb-45"
+      className={`relative w-full max-w-[500px] mx-auto ${isUnclipped ? "-mt-40" : ""}`}
       style={{ height: designH * scale }}
     >
       {/* Design-space canvas — fixed size, scaled as a unit */}
@@ -79,7 +80,7 @@ export default function AboutMeSection({
                 : { x: -75, y: -135, rotate: 0, scale: 2 }
             }
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            title = { isUnclipped ? "Click to clip" : "Click to unclip"}
+            title={isUnclipped ? "Click to clip" : "Click to unclip"}
           >
             {/* Inner: idle wiggle */}
             <motion.div
@@ -96,7 +97,7 @@ export default function AboutMeSection({
               }}
             >
               <Image
-                src={ isUnclipped? paperclipUnclipSvg : paperclipSvg}
+                src={isUnclipped ? paperclipUnclipSvg : paperclipSvg}
                 alt="Paperclip"
                 width={15}
                 height={65}
@@ -124,6 +125,64 @@ export default function AboutMeSection({
                 alt="Thobias Image"
                 fill
                 className="object-contain"
+                priority
+              />
+            </div>
+          </motion.div>
+          <motion.div
+            onClick={onToggleUnclip}
+            className="absolute z-40 cursor-pointer translate-y-20 translate-x-43"
+            initial={false}
+            animate={
+              isUnclipped
+                ? { x: -120, y: -283, scale: 0.9 }
+                : { x: -120, y: -50, scale: 0.9 }
+            }
+            transition={{ type: "spring", stiffness: 180, damping: 22 }}
+          >
+            <div className="relative w-[180px] h-[160px]">
+              {/* Highlight stroke behind the text */}
+              <svg
+                viewBox="0 0 200 160"
+                className="absolute inset-0 w-full h-full pointer-events-none z-0"
+                preserveAspectRatio="none"
+              >
+                <motion.path
+                  d="M10,80 Q90,72 170,78"
+                  stroke="#ebd620"
+                  strokeWidth={56}
+                  strokeLinecap="square"
+                  strokeDasharray={1}
+                  pathLength={1}
+                  fill="none"
+                  opacity={0.6}
+                  style={{ filter: "blur(6px)" }}
+                  initial={{ strokeDashoffset: 1 }}
+                  animate={{ strokeDashoffset: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                />
+
+                {/* Sharp core layer */}
+                <motion.path
+                  d="M10,80 Q90,72 170,78"
+                  stroke="#ebd620"
+                  strokeWidth={40}
+                  strokeLinecap="square"
+                  strokeDasharray={1}
+                  pathLength={1}
+                  fill="none"
+                  initial={{ strokeDashoffset: 1 }}
+                  animate={{ strokeDashoffset: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+                />
+              </svg>
+
+              {/* Text image on top */}
+              <Image
+                src={specText}
+                alt="Specialization Text"
+                fill
+                className="object-contain relative z-10"
                 priority
               />
             </div>
