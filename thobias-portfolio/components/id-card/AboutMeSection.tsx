@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import aboutMeSvg from "../../assets/svg/about-me2.svg";
 import idCardSvg from "../../assets/svg/id-card-final-4.svg";
 import paperclipSvg from "../../assets/svg/paperclip-clipped.svg";
+import paperclipUnclipSvg from "../../assets/svg/paperclip-unclipped.svg";
 import cardTexture from "../../assets/textures/card-texture.png";
 import thobiasPic from "../../assets/svg/thobiaspic.svg";
 import businessCard from "../../assets/svg/business-card-no-logo-final.svg";
@@ -54,7 +55,7 @@ export default function AboutMeSection({
   return (
     <div
       ref={wrapperRef}
-      className="relative w-full max-w-[500px] mx-auto"
+      className="relative w-full max-w-[500px] mx-auto mb-45"
       style={{ height: designH * scale }}
     >
       {/* Design-space canvas — fixed size, scaled as a unit */}
@@ -70,7 +71,7 @@ export default function AboutMeSection({
           {/* Paperclip */}
           <motion.div
             onClick={onToggleUnclip}
-            className="absolute z-50 cursor-pointer hover:scale-110 transition-transform"
+            className="absolute z-50 cursor-pointer hover:scale-105 transition-transform"
             initial={false}
             animate={
               isUnclipped
@@ -78,16 +79,31 @@ export default function AboutMeSection({
                 : { x: -75, y: -135, rotate: 0, scale: 2 }
             }
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            title="Click to unclip"
+            title = { isUnclipped ? "Click to clip" : "Click to unclip"}
           >
-            <Image
-              src={paperclipSvg}
-              alt="Paperclip"
-              width={15}
-              height={65}
-              className="drop-shadow-md"
-              priority
-            />
+            {/* Inner: idle wiggle */}
+            <motion.div
+              animate={
+                isUnclipped
+                  ? { rotate: [0, 0, 0] } // no wiggle while unclipped
+                  : { rotate: [0, -12, 2, -12, 1, 0] } // wiggle while clipped
+              }
+              transition={{
+                duration: 0.6,
+                repeat: Infinity,
+                repeatDelay: 1.5,
+                ease: "easeInOut",
+              }}
+            >
+              <Image
+                src={ isUnclipped? paperclipUnclipSvg : paperclipSvg}
+                alt="Paperclip"
+                width={15}
+                height={65}
+                className="drop-shadow-md"
+                priority
+              />
+            </motion.div>
           </motion.div>
 
           {/* Thobias photo */}
@@ -179,7 +195,7 @@ export default function AboutMeSection({
                 alt="Github"
                 label="Github profile"
                 className="translate-y-69 translate-x-10"
-                isUnclippedx={isUnclipped}
+                isUnclipped={isUnclipped}
               />
               {/* LINKEDIN */}
               <SocialLogo
@@ -188,7 +204,7 @@ export default function AboutMeSection({
                 alt="LinkedIn"
                 label="LinkedIn profile"
                 className="translate-y-78 translate-x-10"
-                isUnclippedx={isUnclipped}
+                isUnclipped={isUnclipped}
               />
               {/* EMAIL */}
               <SocialLogo
@@ -197,7 +213,7 @@ export default function AboutMeSection({
                 alt="Email"
                 label="Email Address"
                 className="translate-y-86 translate-x-10"
-                isUnclippedx={isUnclipped}
+                isUnclipped={isUnclipped}
               />
               {/* INSTAGRAM */}
               <SocialLogo
@@ -206,7 +222,7 @@ export default function AboutMeSection({
                 alt="Instagram"
                 label="Instagram Profile"
                 className="translate-y-94 translate-x-10"
-                isUnclippedx={isUnclipped}
+                isUnclipped={isUnclipped}
               />{" "}
             </div>
           </motion.div>
@@ -218,7 +234,7 @@ export default function AboutMeSection({
             initial={false}
             animate={
               isUnclipped
-                ? { x: 0, y: 430, opacity: 1 }
+                ? { x: 0, y: 440, opacity: 1 }
                 : { x: 0, y: 0, opacity: 0.95 }
             }
             transition={{ type: "spring", stiffness: 180, damping: 22 }}
