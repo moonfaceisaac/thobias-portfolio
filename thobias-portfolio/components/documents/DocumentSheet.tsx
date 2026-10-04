@@ -20,9 +20,12 @@ import gradCeremony2 from "../../assets/screenshots/graduation-ceremony-1.jpg";
 
 import tape from "../../assets/svg/tape.svg";
 
+
+
 interface DocumentSheetProps {
   section: PortfolioSection;
 }
+
 
 export default function DocumentSheet({ section }: DocumentSheetProps) {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(

@@ -56,7 +56,7 @@ export default function AboutMeSection({
   return (
     <div
       ref={wrapperRef}
-      className={`relative w-full max-w-[500px] mx-auto ${isUnclipped ? "-mt-40" : ""}`}
+      className={`relative w-full max-w-[500px] mx-auto ${isUnclipped ? "-mt-[30%]" : ""}`}
       style={{ height: designH * scale }}
     >
       {/* Design-space canvas — fixed size, scaled as a unit */}
@@ -87,12 +87,12 @@ export default function AboutMeSection({
               animate={
                 isUnclipped
                   ? { rotate: [0, 0, 0] } // no wiggle while unclipped
-                  : { rotate: [0, -12, 2, -12, 1, 0] } // wiggle while clipped
+                  : { rotate: [0, -12, 12, -12, 12, 0] } // wiggle while clipped
               }
               transition={{
                 duration: 0.6,
                 repeat: Infinity,
-                repeatDelay: 1.5,
+                repeatDelay: 1,
                 ease: "easeInOut",
               }}
             >
@@ -148,9 +148,9 @@ export default function AboutMeSection({
                 preserveAspectRatio="none"
               >
                 <motion.path
-                  d="M10,80 Q90,72 170,78"
-                  stroke="#ebd620"
-                  strokeWidth={56}
+                  d="M10,80 Q90,80 170,80"
+                  stroke="#81f871"
+                  strokeWidth={70}
                   strokeLinecap="square"
                   strokeDasharray={1}
                   pathLength={1}
@@ -159,21 +159,21 @@ export default function AboutMeSection({
                   style={{ filter: "blur(6px)" }}
                   initial={{ strokeDashoffset: 1 }}
                   animate={{ strokeDashoffset: 0 }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
+                  transition={{ duration: 3, ease: "easeOut" }}
                 />
 
                 {/* Sharp core layer */}
                 <motion.path
-                  d="M10,80 Q90,72 170,78"
-                  stroke="#ebd620"
-                  strokeWidth={40}
+                  d="M10,80 Q90,80 170,80"
+                  stroke="#81f871"
+                  strokeWidth={50}
                   strokeLinecap="square"
                   strokeDasharray={1}
                   pathLength={1}
                   fill="none"
                   initial={{ strokeDashoffset: 1 }}
                   animate={{ strokeDashoffset: 0 }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
+                  transition={{ duration: 3, ease: "easeOut" }}
                 />
               </svg>
 
@@ -256,6 +256,15 @@ export default function AboutMeSection({
                 className="translate-y-69 translate-x-10"
                 isUnclipped={isUnclipped}
               />
+              <a
+                href="https://github.com/moonfaceisaac"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="absolute w-[46%] h-[5%] ring-1 ring-inset cursor-pointer z-20 ring-black/0 translate-y-70 translate-x-20 "></div>
+              </a>
+
               {/* LINKEDIN */}
               <SocialLogo
                 href="https://www.linkedin.com/in/thobias-zandisko-panjaitan-437452225"
@@ -265,15 +274,32 @@ export default function AboutMeSection({
                 className="translate-y-78 translate-x-10"
                 isUnclipped={isUnclipped}
               />
+              <a
+                href="https://www.linkedin.com/in/thobias-zandisko-panjaitan-437452225"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="absolute w-[65%] h-[5%] ring-1 ring-inset cursor-pointer z-20 ring-black/0 translate-y-80 translate-x-20 "></div>
+              </a>
+
               {/* EMAIL */}
               <SocialLogo
-                href="thoxir058@gmail.com"
+                href="mailto:thoxir058@gmail.com"
                 src={emailSVG}
                 alt="Email"
                 label="Email Address"
                 className="translate-y-86 translate-x-10"
                 isUnclipped={isUnclipped}
               />
+              <a
+                href="mailto:thoxir058@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="absolute w-[30%] h-[5%] ring-1 ring-inset cursor-pointer z-20 ring-black/0 translate-y-88 translate-x-20 "></div>
+              </a>
               {/* INSTAGRAM */}
               <SocialLogo
                 href="https://www.instagram.com/thobtobitob"
@@ -283,6 +309,14 @@ export default function AboutMeSection({
                 className="translate-y-94 translate-x-10"
                 isUnclipped={isUnclipped}
               />{" "}
+              <a
+                href="https://www.instagram.com/thobtobitob"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="absolute w-[20%] h-[5%] ring-1 ring-inset cursor-pointer z-20 ring-black/0 translate-y-95 translate-x-20 "></div>
+              </a>
             </div>
           </motion.div>
 

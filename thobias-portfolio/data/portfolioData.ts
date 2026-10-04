@@ -65,7 +65,7 @@ export interface ProjectItem {
 }
 
 export interface PortfolioSection {
-  id: "education" | "experience" | "project" | "skills" | "hobbies";
+  id: "education" | "experience" | "project" | "hobbies";
   tabLabel: string;
   color: string;
 
@@ -465,9 +465,7 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
           {
             id: "demo-&-screenshots",
             title: "DEMO & SCREENSHOTS",
-            images: [
-              { src: home, alt: "Home Page", ratio: 4 / 3 },
-            ],
+            images: [{ src: home, alt: "Home Page", ratio: 4 / 3 }],
           },
           {
             id: "ease-r-model-performance",
@@ -518,38 +516,6 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
       },
     ],
   },
-  // SKILLS-------------------------------------------------------------------------------
-  skills: {
-    id: "hobbies",
-    title: "HOBBIES & INTERESTS",
-    tabLabel: "Hobbies",
-    color: "#D0B753",
-    date: "Ongoing",
-    prodi: "Personal Interests",
-    tags: ["Cybersecurity", "Debating", "Moderating"],
-    blocks: [
-      {
-        id: "academic-summary",
-        title: "ACADEMIC SUMMARY",
-        details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-        ],
-      },
-      {
-        id: "student-organization",
-        title: "STUDENT ORGANIZATION",
-        details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-        ],
-        images: [
-          // { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
-          // { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
-        ],
-      },
-    ],
-  },
   // HOBBIES-------------------------------------------------------------------------------
   hobbies: {
     id: "hobbies",
@@ -561,24 +527,74 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
     tags: ["Cybersecurity", "Debating", "Moderating"],
     blocks: [
       {
-        id: "academic-summary",
-        title: "ACADEMIC SUMMARY",
+        id: "hobbies-summary",
+        title: "HOBBIES SUMMARY",
         details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
+          `
+          This tab holds every fun, and somewhat not-fun, side of me that hopefully paints a picture of what I love and why.
+          `,
+          `  I love a lot of things in life, but most of all, I love diving deep into the array of art that life has to offer, despite being a Computer Science graduate.`,
+
+          `Because...`,
+
+          "What is this earth without art? Nothing but a rock.",
+
+          `  I’m my parents’ last child out of three. I stand on the edge of a cliff, and my siblings like to push me around with their influence. Sometimes, all it takes is a slight nudge for me to fall deep into whatever agenda they’re trying to swallow me alive with.`,
+
+          `    My sister introduced me to films and series. I remember one of the first films she showed me when I was still very smoll, probably around first grade: Inception and Source Code. She introduced me to a lot more, of course, but those two left deeper scars, in a good way.`,
+          `
+          Interestingly, to this day, Inception is still in my top five favorite movies of all time, and sci-fi remains one of my favorite movie genres.`,
+          `
+          On the other side, my brother introduced me to gaming, computers, and the wonderful world of the internet in general. We mostly played online PC games together, such as Lost Saga, DOTA 2, and AdventureQuest Worlds, while sometimes diving into single-player games like Assassin’s Creed, Call of Duty, Prince of Persia, GTA, and so on.`,
+          `
+          Gaming was a big part of my life at one point, but I eventually fell out of love with it and haven’t really gamed since I started college.
+`,
+          `        The only original love of art that I grew entirely by myself was hip-hop music, which later evolved into an appreciation for all kinds of genres.`,
+
+          `   When I was in 4th grade, I was watching Breakout on NET TV when I saw this almost-bald dude facing the city from the top of some kind of balcony on a very tall building, farming aura.`,
+
+          `          It was Eminem’s Not Afraid music video.
+`,
+          `        The music video was cool. I already had a love for music before that eye-opening experience, of course, mostly pop, but I had never heard anything quite like this. The flashy flow and motivating lyrics made me immediately look up the lyrics on the internet and memorize the whole thing.`,
+
+          `Next thing you know, I was diving deeper into the genre and listening to the likes of J. Cole, Logic, Hopsin, Joey Bada$$, and others.
+`,
+          `        After that, I got even nerdier about hip-hop discussions on the internet, including the timeless debate of how Hopsin sucks and whatnot. I chose not to care and kept banging that music anyway.`,
+
+          `Later, during high school, I decided to drop my tendency to idolize artists and started listening to more notable artists across the genre and its siblings, especially R&B. That led me to discover the likes of Kendrick Lamar, Frank Ocean, SZA, Kanye West (or YE), Tyler, The Creator, NIKI, Earl Sweatshirt, and many more.`,
+
+          `The more I listened, the more I realized that I loved music that took risks and was willing to experiment.`,
+
+          `High school was also when I first picked up a guitar and decided to teach myself how to play.`,
+
+          `Then, at some point, I had to experience that one silly little breakup after high school, and naturally, my playlist turned into alternative indie rock and bedroom pop. I discovered artists such as Radiohead, The Strokes, Clairo, Faye Webster, and beabadoobee, which only made me want to strum that guitar even more.
+`,
+          `        Throughout college, the music I played was mostly a mix of things I had already loved for years and whatever new stuff the social media algorithm decided to throw at me.`,
+
+          `Quite different from back then, when I would just play an entire album from an artist I was deeply obsessed with at the time.`,
+
+          `There is one ultimate dream of mine that I hold dearly for whenever I finally get my shit together:`,
+
+          `To release a personal EP.`,
+
+          ` Fully produced. Fully directed by me. With visualizers to go along with it.,
+`,
+          `The vibe would be indie-ish, while the music itself would be a blend of whatever genres I feel like throwing into the blender.`,
+
+          `But until that day arrives, you can check out the things I’ve been involved with in music down below.`,
+
+          `  For all the things I love, you can watch them bleed into the rest of my life through these links:`,
+
+          `SoundCloud
+          Album of the Year
+          Letterboxd
+          Steam
+          Discord`,
         ],
       },
       {
-        id: "student-organization",
-        title: "STUDENT ORGANIZATION",
-        details: [
-          "Currently pursuing a Bachelor of Computer Science in Informatics Engineering.",
-          "Conducting undergraduate thesis research on EASE-R collaborative filtering.",
-        ],
-        images: [
-          // { src: "/images/thesis-1.jpg", alt: "EASE-R diagram", ratio: 4 / 3 },
-          // { src: "/images/thesis-2.jpg", alt: "Evaluation results", ratio: 1 },
-        ],
+        id: "links",
+        title: "LINKS",
       },
     ],
   },

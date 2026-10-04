@@ -15,7 +15,6 @@ const TABS = [
   { id: "education", label: "Education", color: "#6045C3" },
   { id: "experience", label: "Experience", color: "#CF3B3B" },
   { id: "project", label: "Project", color: "#27AA5E" },
-  { id: "skills", label: "Skills", color: "#B84F98" },
   { id: "hobbies", label: "Hobbies", color: "#D0B753" },
 ];
 
@@ -48,7 +47,7 @@ export default function FolderContainer() {
   const showSheet = !!activeTabId || isClosing;
 
   return (
-    <div className="w-full  mx-auto px-4 py-6">
+    <div className="w-full h-full  mx-auto px-4 py-6">
       {/* Desktop: Side-by-Side (Dossier Left, ID Right) | Mobile: Stacked */}
       {/* <div className="flex flex-col md:flex-row items-start justify-start gap-8"> */}
       <div className="flex flex-col sm:flex-row gap-8 justify-between items-start">
@@ -60,35 +59,7 @@ export default function FolderContainer() {
           />
         </div>
         {/* DOSSIER SECTION (Takes larger width on desktop) */}
-        <div className="relative pl-13 z-0 h-full w-full md:w-[55%] max-w-[1000px] bg-[#FF894A] flex flex-row items-start">
-          {/* <div className="w-full md:flex-[3]"> */}
-          {/* Vertical Folder Body */}
-
-          {/*Folder */}
-          {/* <div className="relative z-20 flex-1 bg-[#FF894A] p-4 sm:p-6 min-h-[600px] rounded-l-md shadow-3xl overflow-hidden border-l border-y border-white/20"></div> */}
-          {/* Folder Cover / Closed State */}
-          {/* <AnimatePresence>
-              {activeTabId && (
-                <motion.div
-                  key="sheet"
-                  className="relative z-0"
-                  initial={false}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 1 }}
-                  transition={{ duration: 1.0 }}
-                >
-                  <div className="flex justify-between items-center mb-2">
-                    <button
-                      onClick={() => setActiveTabId(null)}
-                      className="text-xs font-mono text-white/90 hover:text-white underline cursor-pointer"
-                    >
-                      ← Close Dossier Cover
-                    </button>
-                  </div>
-                  {activeSection && <DocumentSheet section={activeSection} />}
-                </motion.div>
-              )}
-            </AnimatePresence> */}
+        <div className="relative pl-13 z-0 h-[100%] w-full md:w-[55%] max-w-[1000px] bg-[#FF894A] flex flex-row items-start">
           <div className="flex-1 min-h-full  z-20">
             {showSheet && sectionToRender && (
               <div className="relative z-0">
@@ -100,7 +71,6 @@ export default function FolderContainer() {
                     ← Close Dossier Cover
                   </button>
                 </div>
-                {/* {activeSection && <DocumentSheet section={activeSection} />} */}
                 <DocumentSheet section={sectionToRender} />
               </div>
             )}
@@ -111,7 +81,7 @@ export default function FolderContainer() {
                 <motion.div
                   key="cover"
                   onClick={() => setActiveTabId("education")}
-                  className="absolute mr-14 h-[1000px] ml-3 -inset-3 -bottom-4 -left-4 z-0 flex flex-col min-h-screen justify-between items-center cursor-pointer"
+                  className="absolute mr-14 h-[100%] ml-3 -inset-3 -bottom-4 -left-4 z-0 flex flex-col min-h-screen justify-between items-center cursor-pointer"
                   style={{
                     transformOrigin: "left center",
                     backfaceVisibility: "hidden",
@@ -122,9 +92,9 @@ export default function FolderContainer() {
                   transition={{ duration: 1.0, ease: [0.42, 0, 0.58, 1] }}
                   onAnimationComplete={handleCoverEnterComplete}
                 >
-                  <div className="absolute w-full h-[1000px] z-20 flex items-start">
+                  <div className="absolute w-full h-[100%] z-20 flex items-start">
                     <div
-                      className="relative min-h-full flex-1 bg-[#FF894A] p-4 sm:p-6 h-screen min-w-full rounded-l-md shadow-2xl overflow-hidden border-l border-y border-white/20"
+                      className="relative min-h-[100%] flex-1 bg-[#FF894A] p-4 sm:p-6 h-screen min-w-full rounded-l-md shadow-2xl overflow-hidden border-l border-y border-white/20"
                       style={{ perspective: "2000px" }}
                     ></div>
                     {/* Map Texture Overlay */}
@@ -137,8 +107,11 @@ export default function FolderContainer() {
                       />
                     </div>
                     {/* Stamp */}
-                    <div className="absolute h-[1000px] flex w-full pt-10 pb-10 flex flex-col items-center justify-between">
+                    <div className="absolute h-[100%] flex w-full pt-10 pb-10 flex flex-col items-center justify-start">
                       {/* <div className="flex max-h-[200px] flex-1 w-[600px] min-w-[100px] flex-row"> */}
+                      <div className="relative z-30 text-white/80 font-mono text-xs sm:text-sm pb-4 ">
+                        [ Click any tab on the right to open file dossier ]
+                      </div>
                       <div className="relative w-[60%] min-w-[200px] max-w-[600px] aspect-[3/1] z-30">
                         <Image
                           src={stampSvg}
@@ -146,9 +119,6 @@ export default function FolderContainer() {
                           fill
                           className="object-contain -rotate-3"
                         />
-                      </div>
-                      <div className="relative z-30 text-white/80 font-mono text-xs sm:text-sm pb-4 ">
-                        [ Click any tab on the right to open file dossier ]
                       </div>
                     </div>
                   </div>
