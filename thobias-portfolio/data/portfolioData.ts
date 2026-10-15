@@ -571,10 +571,6 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
           `@m0nkfe`
         ],
       },
-      {
-        id: "links",
-        title: "LINKS",
-      },
     ],
   },
 };
