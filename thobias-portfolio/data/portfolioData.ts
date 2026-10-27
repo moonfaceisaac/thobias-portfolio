@@ -42,6 +42,11 @@ import notSmoking from "../assets/screenshots/projects/Smoking Activity Detector
 // TimeZone Converter
 import xxx5 from "../assets/screenshots/projects/LearnTic/DasborGuru.png";
 
+//Facility Tracker
+import dashboardft from "../assets/screenshots/projects/Facility Tracker/dashboard-ft.png"
+import equipmentft from "../assets/screenshots/projects/Facility Tracker/equipment-ft.png"
+import addEquipmentft from "../assets/screenshots/projects/Facility Tracker/addequipment-ft.png"
+
 export interface SectionImage {
   src: string | StaticImageData;
   alt: string;
@@ -252,6 +257,62 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
         ],
       },
       {
+        id: "facility-tracker",
+        title:
+          "Admin Access Only Facility Tracker",
+        date: "2026",
+        prodi: "Teknik Informatika",
+        tags: ["PHP, Laravel, TypeScript, shadcn, Tailwind, Inertia, MySQL"],
+        blocks: [
+          {
+            id: "overview",
+            title: "OVERVIEW",
+            details: [
+              "A web-based facility tracker built only with admin access. Built for an endeavour that needs to manage and track mass equipments or facility segregated by different locations.",
+            ],
+          },
+          {
+            id: "problem-&-approach",
+            title: "PROBLEM & APPROACH",
+            details: [
+              "Tracking equipment and its locations in spreadsheets or paper logs makes it hard to know what exists, where it is, and who is allowed to change the records, so data ends up duplicated, outdated, or edited by the wrong people. I built Facility Tracker to replace that with one centralized web app. It stores equipment and locations in a relational database, gives users full CRUD operations on both, and uses authentication and authorization so only the right people can access and manage the data. I also built a clean, responsive interface so non-technical staff can use it without training.",
+            ],
+          },
+          {
+            id: "my-role",
+            title: "MY ROLE",
+            details: [
+              "I was the sole developer, so I owned the project end to end. I defined the requirements and designed the database schema, then built the Laravel backend, including models, controllers, validation, and the authentication and authorization system. I also built the Vue frontend with reusable components styled in Tailwind and shadcn/ui. I handled testing and debugging myself, which gave me hands-on experience across the whole stack, from database design to the user interface."
+            ],
+          },
+          {
+            id: "tech-stack-&-architecture",
+            title: "TECH STACK & ARCHITECTURE",
+            details: [
+              "PHP · Laravel · TypeScript · Vue.js · Tailwind CSS · shadcn · MySQL",
+              "The app uses a layered, MVC-style architecture. Laravel (PHP) handles the backend: routing, controllers, validation, authentication, and authorization, with Eloquent models and migrations managing the MySQL database [confirm]. The frontend is built with Vue.js and styled with Tailwind CSS and shadcn/ui, which gives a consistent, responsive, component-based interface. MySQL stores the equipment and location tables as related data, and Laravel’s authentication and authorization protect the routes and features.",
+            ],
+          },
+          {
+            id: "demo-&-screenshots",
+            title: "DEMO & SCREENSHOTS",
+            images: [
+              { src: dashboardft, alt: "Dashboard Page", ratio: 4 / 3 },
+              {
+                src: equipmentft,
+                alt: "Equipment Page",
+                ratio: 4 / 3,
+              },
+              {
+                src: addEquipmentft,
+                alt: "Add Equipment Page",
+                ratio: 4 / 3,
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: "learntic",
         title: "LearnTic",
         date: "2025",
@@ -401,26 +462,26 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
               "Built the frontend with React.js and Tailwind CSS. The backend runs on Node.js with Express, communicating with PostgreSQL through Prisma as the ORM.",
             ],
           },
-          {
-            id: "demo-&-screenshots",
-            title: "DEMO & SCREENSHOTS",
-            images: [
-              { src: dasborNotaris, alt: "Dasbor Notaris", ratio: 4 / 3 },
-              {
-                src: dasborKlien,
-                alt: "Dasbor Klien",
-                ratio: 4 / 3,
-              },
-            ],
-          },
-          {
-            id: "ease-r-model-performance",
-            images: [
-              { src: dasborStaff, alt: "Dasbor Staff", ratio: 4 / 3 },
-              { src: klienFitur1, alt: "Fitur Klien", ratio: 4 / 3 },
-              { src: loginNotaris, alt: "Login Notaris", ratio: 4 / 3 },
-            ],
-          },
+          // {
+          //   id: "demo-&-screenshots",
+          //   title: "DEMO & SCREENSHOTS",
+          //   images: [
+          //     { src: dasborNotaris, alt: "Dasbor Notaris", ratio: 4 / 3 },
+          //     {
+          //       src: dasborKlien,
+          //       alt: "Dasbor Klien",
+          //       ratio: 4 / 3,
+          //     },
+          //   ],
+          // },
+          // {
+          //   id: "ease-r-model-performance",
+          //   images: [
+          //     { src: dasborStaff, alt: "Dasbor Staff", ratio: 4 / 3 },
+          //     { src: klienFitur1, alt: "Fitur Klien", ratio: 4 / 3 },
+          //     { src: loginNotaris, alt: "Login Notaris", ratio: 4 / 3 },
+          //   ],
+          // },
         ],
       },
       {
