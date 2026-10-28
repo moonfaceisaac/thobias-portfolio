@@ -12,6 +12,7 @@ import paperclipUnclipSvg from "../../assets/svg/paperclip-unclipped.svg";
 import cardTexture from "../../assets/textures/card-texture.png";
 import thobiasPic from "../../assets/svg/thobiaspic.svg";
 import businessCard from "../../assets/svg/business-card-no-logo-final.svg";
+import clickMe from "../../assets/svg/click-me4.svg";
 
 import SocialLogo from "./SocialLogo";
 
@@ -50,6 +51,12 @@ export default function AboutMeSection({
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
+
+  // const upTheText = () => {
+  //   if
+
+  //   }
+  // }
 
   const designH = isUnclipped ? DESIGN_H_UNCLIPPED : DESIGN_H_COLLAPSED;
 
@@ -106,6 +113,26 @@ export default function AboutMeSection({
               />
             </motion.div>
           </motion.div>
+
+          {!isUnclipped && (
+            <motion.div
+              className="absolute -translate-y-50 -translate-x-20 z-50 w-[30%] h-[30%]"
+              initial={false}
+              animate={
+                isUnclipped
+                  ? { rotate: [0, 0, 0] }
+                  : { rotate: [0, -12, 12, -12, 12, 0] }
+              }
+              transition={{
+                duration: 0.6,
+                repeat: Infinity,
+                repeatDelay: 1,
+                ease: "easeInOut",
+              }}
+            >
+              <Image src={clickMe} alt="Click Me Text" fill></Image>
+            </motion.div>
+          )}
 
           {/* Thobias photo */}
           <motion.div
@@ -264,7 +291,6 @@ export default function AboutMeSection({
               >
                 <div className="absolute w-[46%] h-[5%] ring-1 ring-inset cursor-pointer z-20 ring-black/0 translate-y-70 translate-x-20 "></div>
               </a>
-
               {/* LINKEDIN */}
               <SocialLogo
                 href="https://www.linkedin.com/in/thobias-zandisko-panjaitan-437452225"
@@ -282,7 +308,6 @@ export default function AboutMeSection({
               >
                 <div className="absolute w-[65%] h-[5%] ring-1 ring-inset cursor-pointer z-20 ring-black/0 translate-y-80 translate-x-20 "></div>
               </a>
-
               {/* EMAIL */}
               <SocialLogo
                 href="mailto:thoxir058@gmail.com"
