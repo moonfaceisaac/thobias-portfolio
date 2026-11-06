@@ -429,7 +429,7 @@ export const PORTFOLIO_DATA: Record<string, PortfolioSection> = {
       {
         id: "system-information-notary",
         title: "Information System/Administration for Notary Office",
-        date: "2024",
+        date: "2026",
         prodi: "Web Development",
         tags: ["TypeScript", "Utility", "Tool"],
         blocks: [
